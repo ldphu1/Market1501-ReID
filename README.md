@@ -23,7 +23,7 @@ Here is my python source code for Person Re-Identification (Re-ID) - a robust sy
 
 4. Compare with gallery using cosine similarity
 
-5. Assign ID if similarity > threshold (default: 0.6), else → Unknown
+5. Assign ID if similarity > threshold (default: 0.6)
 
 **Building a Custom Gallery for Specific Videos**
 
