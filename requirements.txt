@@ -6,4 +6,4 @@ Pillow
 tqdm
 tensorboard
 ultralytics
-deep-sort-realtime
+pytorch-metric-learning
