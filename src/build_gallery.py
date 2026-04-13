@@ -23,8 +23,7 @@ def extract_embedding(model, img_path, transform, device):
     img = transform(img).unsqueeze(0).to(device)
 
     with torch.no_grad():
-        emb = model(img)
-        emb = F.normalize(emb, p=2, dim=1)
+        emb, _ = model(img)
 
     return emb.cpu()
 
@@ -49,6 +48,9 @@ def build_gallery(data_dir, model_path, save_path, device):
         emb = extract_embedding(model, full_path, transform, device)
         pid = img_name.split("_")[0]
 
+        if pid in ['0000', '-1']:
+            continue
+
         gallery_paths.append(full_path)
         gallery_embs.append(emb)
         gallery_ids.append(pid)
@@ -66,8 +68,7 @@ def build_gallery(data_dir, model_path, save_path, device):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Extract and build gallery features for Re-ID")
-    parser.add_argument("--data_dir", type=str, default="market1501/bounding_box_test",
-                        help="Path to gallery images")
+    parser.add_argument("--data_dir", type=str, default="market1501/bounding_box_test", help="Path to gallery images")
     parser.add_argument("--model_path", type=str, default="weights/best_model.pth", help="Path to the trained model weights")
     parser.add_argument("--save_path", type=str, default="weights/gallery_market1501.pt", help="Path to save the extracted features")
 

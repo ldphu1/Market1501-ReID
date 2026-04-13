@@ -1,5 +1,5 @@
 data/
-weights/
+../weights/
 runs/
 output/
 *.pt
