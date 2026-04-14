@@ -131,10 +131,10 @@ def process_video(args, reid_model, detector, gallery_data, transform, device):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--video_path", type=str, default="data/video.mp4", help="Path to the original video")
+    parser.add_argument("--video_path", type=str, default="../data/video.mp4", help="Path to the original video")
     parser.add_argument("--output_path", type=str, default="output_reid.mp4", help="Path to save the resulting video")
-    parser.add_argument("--model_weights", type=str, default="weights/best_model.pth", help="Model weight file")
-    parser.add_argument("--gallery_path", type=str, default="weights/gallery_market1501.pt", help="Path to gallery file")
+    parser.add_argument("--model_weights", type=str, default="../weights/best_model.pth", help="Model weight file")
+    parser.add_argument("--gallery_path", type=str, default="../weights/gallery_market1501.pt", help="Path to gallery file")
     parser.add_argument("--threshold", type=float, default=0.6, help="threshold")
     parser.add_argument("--alpha" ,type=float, default=0.1, help="Update rate for the moving average embedding. ")
 
