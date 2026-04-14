@@ -7,10 +7,13 @@ Here is my python source code for Person Re-Identification (Re-ID) - a robust sy
 * Build a feature gallery from a database of known identities (`build_gallery.py`)
 * Run an inference app which detects people using YOLOv8 and identifies/tracks them across frames in a single video file (`demo.py`)
 
+
+https://github.com/user-attachments/assets/6299933e-46b2-4036-ae4f-ffd2e6cf5a1a
+
 <div align="center">
-    <img src="https://github.com/user-attachments/assets/a5286544-f871-42ae-b8e9-68f906be6f56" width="100%" >
-    </img>
-  <p><i>An example of my model's output</i></p>
+    <img src="https://github.com/user-attachments/assets/a5286544-f871-42ae-b8e9-68f906be6f56" width="50%" ></img>
+    <img src="https://github.com/user-attachments/assets/6299933e-46b2-4036-ae4f-ffd2e6cf5a1a" width="50%" ></img>
+  <p><i>Example of my model's output</i></p>
 </div>
 
 # Person Re-Identification 
