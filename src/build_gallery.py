@@ -68,9 +68,9 @@ def build_gallery(data_dir, model_path, save_path, device):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Extract and build gallery features for Re-ID")
-    parser.add_argument("--data_dir", type=str, default="market1501/bounding_box_test", help="Path to gallery images")
-    parser.add_argument("--model_path", type=str, default="weights/best_model.pth", help="Path to the trained model weights")
-    parser.add_argument("--save_path", type=str, default="weights/gallery_market1501.pt", help="Path to save the extracted features")
+    parser.add_argument("--data_dir", type=str, default="../market1501/bounding_box_test", help="Path to gallery images")
+    parser.add_argument("--model_path", type=str, default="../weights/best_model.pth", help="Path to the trained model weights")
+    parser.add_argument("--save_path", type=str, default="../weights/gallery_market1501.pt", help="Path to save the extracted features")
 
     args = parser.parse_args()
 
