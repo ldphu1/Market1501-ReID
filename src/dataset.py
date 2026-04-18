@@ -73,7 +73,7 @@ class Evaldataset(Dataset):
 
     def __getitem__(self, index):
         pid, img_path, camid = self.samples[index]
-        img = Image.open(img_path)
+        img = Image.open(img_path).convert('RGB')
         if self.transform:
             img = self.transform(img)
 
